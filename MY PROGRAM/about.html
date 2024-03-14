@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Inknut Antiqua' rel='stylesheet'>
+	<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+	<title>Jm's Portfolio</title>
+</head>
+<body>
+	
+	<div class="homebuttonall">
+		<a href="index.html"><p>@KYLEYYYY</p></a>
+	</div>
+
+	<div class="aboutpicture">
+		<img src="images/aboutme.jpg">
+	</div>
+
+	<a href="index.html"> <img class="back" src="images/circle.png"> </a>
+
+	<div class="title">
+		<h1>About Me</h1>
+
+		<div class="description">
+			<p>I am a committed, enthusiastic individual with an unwavering will to
+				succeed in both<br>
+				personal and professional tasks. I am devoted to
+				accomplishment and ongoing progress,<br>always keeping a positive
+				mindset. Furthermore, I thrive on challenges, channeling my<br>
+				determination into every endeavor I undertake, inspiring those around
+				me with my<br>
+				relentless pursuit of excellence.
+			</p>
+		</div>
+
+		<div class="tab-titles">
+			<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+			<p class="tab-links" onclick="opentab('exposure')">Work Exposure</p>
+			<p class="tab-links" onclick="opentab('education')">Education</p>
+		</div>
+
+		<div class="tab-contents active-tab" id="skills">
+			<ul>
+				<li><span>Web Development</span><br>Web app Development</li>
+				<li><span>Digital Marketing</span><br>Creates Content</li>
+				<li><span>Computer Languages</span><br>HTML, C, Java, C++, Languages</li>
+			</ul>
+		</div>
+
+		<div class="tab-contents" id="exposure">
+			<ul>
+				<li><span>June-August</span><br>Provides good services to Customers</li>
+
+			</ul>
+		</div>
+
+		<div class="tab-contents" id="education">
+			<ul>
+				<li><span>2009-2016</span><br>Mactan Elementary School</li>
+				<li><span>2016-2020</span><br>Pajo National High School</li>
+				<li><span>2020-2022</span><br>University of Cebu</li>
+				<li><span>2023-Current</span><br>CITE Technical Institute Inc.</li>
+			</ul>
+		</div>
+
+
+		<script>
+
+			var tablinks = document.getElementsByClassName("tab-links");
+			var tabcontents = document.getElementsByClassName("tab-contents");
+
+			function opentab(tabname) {
+				for(tablink of tablinks) {
+					tablink.classList.remove("active-link")
+				}
+
+				for(tabcontent of tabcontents) {
+					tabcontent.classList.remove("active-tab")
+				}
+				event.currentTarget.classList.add("active-link");
+				document.getElementById(tabname).classList.add("active-tab")
+			}
+
+		</script>
+	
+</body>
+</html>
